@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>IDS Tools for Data Science Workshop 23</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/agency.css" rel="stylesheet">
+  <!--  <link href="css/agency.min.css" rel="stylesheet">  -->
+
+  <style type="text/css">
+    .tg .tg-gges {
+      background-color: #C5D9F1;
+      text-align: left;
+      vertical-align: bottom
+    }
+
+    .tg .tg-0lax {
+      text-align: left;
+      vertical-align: top
+    }
+
+    .tg .tg-7zrl {
+      text-align: left;
+      vertical-align: bottom
+    }
+
+    .tg .tg-ycr8 {
+      text-align: left;
+      vertical-align: top
+    }
+
+    .tg .tg-raw7 {
+      border-color: inherit;
+      font-weight: bold;
+      text-align: left;
+      vertical-align: top
+    }
+
+    .tg .tg-zv36 {
+      border-color: inherit;
+      font-weight: bold;
+      text-align: left;
+      vertical-align: top
+    }
+
+    .tg .tg-uk4f {
+      text-align: left;
+      vertical-align: top
+    }
+
+    .tg .tg-6sgx {
+      text-align: left;
+      vertical-align: top
+    }
+
+    .tg .tg-vrym {
+      background-color: #353a3f;
+      border-color: inherit;
+      color: #ffc702;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle
+    }
+
+    .tg .tg-y0hg {
+      text-align: left;
+      vertical-align: top
+    }
+
+  </style>
+
+ <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 5px 7px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #fed136;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">IDS Workshop 23</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#schedule">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#sessions">Sessions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#participants">Participants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#organizers">Organizers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-heading text-uppercase">IDS Tools for Data Science Workshop 23</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section class="bg-dark page-section" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading-underline text-uppercase text-white">About</h2>
+          <h3 class="section-subheading-normal text-light">
+            <p>A workshop on tools for data science with R. </p>
+				<p> Run by students of the course <br><a
+            href="https://github.com/intro-to-data-science-23" target="_blank">Introduction to Data Science (IDS)</a><br> at the Hertie School, Germany.</p>
+            <p>All content produced and prepared by students of the <a href="https://www.hertie-school.org/en/mds" target="_blank">Master of Data Science for Public Policy</a>, the <br><a href="https://www.hertie-school.org/en/mpp"
+              target="_blank">Master of Public Policy</a>, and the <br><a href="https://www.hertie-school.org/en/mia" target="_blank">Master of International Affairs</a>.</p> <!-- The live sessions of the workshop are held on November 21, 2022. See <a href="schedule.html" target="_blank">here</a> for the original schedule. -->
+          </h3>
+          <br>
+          <div class="col-lg-12 text-center">
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger center" href="#sessions" target="_blank">Check out the sessions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Schedule Grid -->
+    <section class="bg-light page-section" id="schedule">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading-underline text-uppercase">Schedule - October 30, 2023</h2>
+          </div>
+        </div>
+        <div class="row">
+          <table class="tg">
+            <thead>
+              <tr>
+                <th class="tg-vrym">Time</th>
+                <th class="tg-vrym">Panel 1 (14-20h: 3.01 - MAKERSPACE)</th>
+                <th class="tg-vrym">Panel 2 (14-16h: 2.61, 16-20h: 1.61)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid black">
+                <td class="tg-raw7">14:00 - 15:00</td>
+                <td class="tg-6sgx"><strong>Geospatial analysis with <span style="color: #fec503">sf</span></strong><br>
+                  <i>Jennifer Estigene, Giulia Maria Petrilli, Xiaohan Wu</i><br>
+                  <a href="https://vimeo.com/879028480/e2a4b80db5" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/07_Geodata_Estigene_Petrilli_Wu" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/07_Geodata_Estigene_Petrilli_Wu/791c43c307db92e1a1b71e409afeffa7d8129f02/SF.html" target="_blank">
+                    <i class="fas fa-book"></i> Tutorial
+                  </a>
+                </td>
+                <td class="tg-uk4f"><strong>Interactive graphics with <span style="color: #fec503">plotly</span></strong><br>
+                  <i>Lonny Chen, Gayatri Shejwal, Giorgio Coppola</i><br>
+                  <a href="https://vimeo.com/879218806/4a0e91f91f" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/10-plotlydash-coppola-shejwal-chen" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a href="https://raw.githack.com/intro-to-data-science-23-workshop/10-plotlydash-coppola-shejwal-chen/main/Tutorial-solutions.html" target="_blank">
+                    <i class="fas fa-book"></i> Tutorial
+                  </a>					
+                </td>
+              </tr>
+              <tr style="border-bottom:1px solid black">
+                <td class="tg-zv36">15:00 - 16:00</td>
+                <td class="tg-ycr8"><strong>Interactive maps with <span style="color: #fec503">leaflet</span></strong><br>
+                  <i>Ray Hossain, Manjiri Girish Satam, Camilo Pedraza Jiménez</i><br>
+                  <a href="https://vimeo.com/879028515/4b97fb5988" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/09-leaflet-satam-jimenez-hossain" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+						<a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/09-leaflet-satam-jimenez-hossain/main/Leaflet_Tutorial.html" target="_blank">
+						  <i class="fas fa-book"></i> Tutorial
+						</a>
+                </td>
+                <td class="tg-y0hg"><strong>Dates and times with <span style="color: #fec503">lubridate</span></strong><br>
+                  <i>Anzhelika Belozerova, Monserrat Lopez Perez</i><br>
+                  <a href="https://vimeo.com/879028090/a38e78e181" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/03-Dates-Lopez-Belozerova" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+						<a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/03-Dates-Lopez-Belozerova/d103af71e2a4d8e4cba16e449758e4ffa6a451c4/01-tutorial-lubridate.html" target="_blank">
+						  <i class="fas fa-book"></i> Tutorial
+						</a>
+                </td>
+              </tr>
+              <tr style="border-bottom:1px solid black">
+                <td class="tg-raw7">16:00 - 17:00</td>
+                <td class="tg-6sgx"><strong>Presentation-ready tables with <span style="color: #fec503">gt</span> and <span style="color: #fec503">gtExtra</span></strong><br>
+                  <i>Leticia Figueiredo Collado, Aditya Narayan Rai, Lino Zurmühl</i><br>
+                  <a href="https://vimeo.com/879028494/45a3617ac4" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/08-gt-rai-collado-zurmuehl" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+					<a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/08-gt-rai-collado-zurmuehl/33175bdf73ff66075bb178742be6ba0655daa4a0/practice_materials_solutions.html" target="_blank">
+					  <i class="fas fa-book"></i> Tutorial
+					</a>
+				</td>
+                <td class="tg-uk4f"><strong>Time-series analysis with <span style="color: #fec503">tsibble</span> and <span style="color: #fec503">fable</span></strong><br>
+                  <i>Benjamin Adoba Ayida, Johannes Müller, Armande Aboudrar-Méda</i><br>
+                  <a href="https://vimeo.com/879028404/54f1aff518" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/05-Time-series-Aboudrar-Ayida-Mueller" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+					<a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/05-Time-series-Aboudrar-Ayida-Mueller/c998e6f73cf8ec267547d537001e15a0bbe0124c/material/presentation.html" target="_blank">
+					  <i class="fas fa-book"></i> Tutorial
+					</a>
+				</td>
+              </tr>
+              <tr style="border-bottom:1px solid black">
+                <td class="tg-zv36">17:00 - 18:00 </td>
+                <td class="tg-ycr8"><strong>Wrangling data at scale with <span style="color: #fec503">data.table</span></strong><br>
+                  <i>Sai Prusni Bandela, Minho Kang, Milton Mier</i><br>
+                  <a href="https://vimeo.com/879028046/ee4772209f" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/02-data.table-prusni-milton-minho" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+						<a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/02-data.table-prusni-milton-minho/1c6d1fa59a42f5cce8afa85b06a204612c163ab7/Practice/Practice.html" target="_blank">
+						  <i class="fas fa-book"></i> Tutorial
+						</a>
+                </td>
+                <td class="tg-y0hg"><strong>Advanced string processing with <span style="color: #fec503">stringi</span> and <span style="color: #fec503">stringr</span></strong><br>
+                  <i>Daniel Boppert, Jackson Luckey, Miriam Runde</i><br>
+                <a href="https://vimeo.com/879028361/bbc46a7467" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/04-text-analysis-Boppert-Luckey-Runde" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+						<a href="https://raw.githack.com/intro-to-data-science-23-workshop/04-text-analysis-Boppert-Luckey-Runde/main/additional_exercises.html" target="_blank">
+						  <i class="fas fa-book"></i> Tutorial
+						</a>
+                </td>
+              </tr>
+              <tr style="border-bottom:1px solid black">
+                <td class="tg-raw7">18:00 - 19:00</td>
+                <td class="tg-6sgx"><strong>Cleaning and wrangling data with <span style="color: #fec503">janitor</span> and <span style="color: #fec503">forcats</span></strong><br>
+                  <i>Elena Dreyer, Shruti Kakade, Luis Fernando Ramirez Ruiz</i><br>
+                <a href="https://vimeo.com/879028012/2ec58a72ca" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/01-data-wrangling-dreyer-ramirez-kakade" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+						<a href="https://rawcdn.githack.com/elenaivadreyer/01-wrangling-dreyer-ramirez-kakade/239112fae9cc0486bfba72e04f21db4afcbe1737/final_presentation_files/janitor_forcats.html" target="_blank">
+						  <i class="fas fa-book"></i> Tutorial
+						</a>
+                </td>
+                <td class="tg-uk4f"><strong>Text analysis with <span style="color: #fec503">quanteda</span></strong><br>
+                  <i>Killian Conyngham, Aranxa Márquez Ampudia, Luca-Verona Vellage</i><br>
+                <a href="https://vimeo.com/879028429/27abaa9937" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/06-textanalysis-Conyngham-Vellage-Marquez" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+						<a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/06-textanalysis-Conyngham-Vellage-Marquez/29fc62545259597f3f0974270d6e734661d5634b/Live_Tutorial.html" target="_blank">
+						  <i class="fas fa-book"></i> Tutorial
+						</a>
+                </td>
+              </tr>
+              <tr style="border-bottom:1px solid black">
+                <td class="tg-zv36">19:00 - 20:00</td>
+                <td class="tg-ycr8"><strong>Tidy modeling with <span style="color: #fec503">tidymodels</span></strong><br>
+                  <i>Daniyar Imanaliev, Isabella Urbano Trujillo, Henry Baker</i><br>
+                  <a href="https://vimeo.com/879028624/fb808f0d91" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/12-tidymodels-imanaliev-baker-urbanotrujillo" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+					<a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/12-tidymodels-imanaliev-baker-urbanotrujillo/b89aafc7a2070a59be2cb438bc88b6bd8d568b14/presentation.html#5" target="_blank">
+					  <i class="fas fa-book"></i> Tutorial
+					</a></td></td>
+                <td class="tg-y0hg"><strong>Ensuring reproducibility with <span style="color: #fec503">renv</span></strong><br>
+                  <i>Varvara Ilyina, Nima Thing</i><br>
+                  <a href="https://vimeo.com/881466966/109795e964" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/13_Renv_Thing_Ilyina" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+						<a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/13_Renv_Thing_Ilyina/8402bec330b638d1ef97a3e6a50014bed418b77c/Tutorial_renv.html" target="_blank">
+						  <i class="fas fa-book"></i> Tutorial
+						</a>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  <!-- Featured Grid -->
+  <section class="bg-dark page-section" id="sessions">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading-underline text-uppercase text-white">Sessions</h2>
+        </div>
+      </div>
+
+<div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('data')"> Data Wrangling </button>
+  <button class="btn" onclick="filterSelection('visualization')"> Visualization</button>
+  <button class="btn" onclick="filterSelection('modeling')"> Modeling</button>
+  <button class="btn" onclick="filterSelection('programming')"> Programming</button>  
+  <button class="btn" onclick="filterSelection('geo')"> Geo Data</button>
+  <button class="btn" onclick="filterSelection('text')"> Text Data</button>
+  <button class="btn" onclick="filterSelection('time')"> Time data</button>
+  <button class="btn" onclick="filterSelection('web')"> Web Data</button>
+  <button class="btn" onclick="filterSelection('reproducibility')"> Reproducibility</button>
+  <button class="btn" onclick="filterSelection('publishing')"> Publishing</button>
+
+  
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column data text">
+  <div class="content">
+    <a class="portfolio-link" href="https://vimeo.com/879028012/2ec58a72ca" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Cleaning and wrangling data with janitor and forcats
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Elena Dreyer, Shruti Kakade, Luis Fernando Ramirez Ruiz</p>
+                  <a href="https://vimeo.com/879028012/2ec58a72ca" target="_blank">
+                  <i class="fab fa-youtube"></i> Video
+                </a>
+                <a href="https://github.com/intro-to-data-science-23-workshop/01-data-wrangling-dreyer-ramirez-kakade" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rawcdn.githack.com/elenaivadreyer/01-wrangling-dreyer-ramirez-kakade/239112fae9cc0486bfba72e04f21db4afcbe1737/final_presentation_files/janitor_forcats.html" target="_blank">
+                  <i class="fas fa-book"></i> Tutorial
+                </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="hhttps://vimeo.com/879028012/2ec58a72ca" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/wrangling-janitor-forcats.jpeg" alt="">
+          </a>
+        </div>
+  </div>
+
+
+  <div class="column data programming">
+  <div class="content">
+    <a class="portfolio-link" href="https://vimeo.com/879028046/ee4772209f" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Wrangling data at scale with data.table
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Sai Prusni Bandela, Minho Kang, Milton Mier</p>
+                  <a href="https://vimeo.com/879028046/ee4772209f" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/02-data.table-prusni-milton-minho" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/02-data.table-prusni-milton-minho/1c6d1fa59a42f5cce8afa85b06a204612c163ab7/Practice/Practice.html" target="_blank">
+                    <i class="fas fa-book"></i> Tutorial
+                  </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/879028046/ee4772209f" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/wrangling-data-table.jpeg" alt="">
+          </a>
+        </div>
+  </div>
+
+  <div class="column geo data visualization">
+    <div class="content">
+      <a class="portfolio-link" href="https://vimeo.com/879028480/e2a4b80db5" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Geospatial analysis with sf
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Jennifer Estigene, Giulia Maria Petrilli, Xiaohan Wu</p>
+                <a href="https://vimeo.com/879028480/e2a4b80db5" target="_blank">
+                  <i class="fab fa-youtube"></i> Video
+                </a>
+                <a href="https://github.com/intro-to-data-science-23-workshop/07_Geodata_Estigene_Petrilli_Wu" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/07_Geodata_Estigene_Petrilli_Wu/791c43c307db92e1a1b71e409afeffa7d8129f02/SF.html" target="_blank">
+                  <i class="fas fa-book"></i> Tutorial
+                </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/879028480/e2a4b80db5" target="_blank">
+            <img class="img-fluid img-portfolio" src="img/sessions/geospatial-analysis-sf.jpg" alt="">
+          </a>
+        </div>
+  </div>
+
+  
+
+  <div class="column reproducibility programming">
+  <div class="content">
+    <a class="portfolio-link" href="https://vimeo.com/881466966/109795e964" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Ensuring reproducibility with renv
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Varvara Ilyina, Nima Thing</p>
+                  <a href="https://vimeo.com/881466966/109795e964" target="_blank">
+                  <i class="fab fa-youtube"></i> Video
+                </a>
+                <a href="https://github.com/intro-to-data-science-23-workshop/13_Renv_Thing_Ilyina" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/13_Renv_Thing_Ilyina/8402bec330b638d1ef97a3e6a50014bed418b77c/Tutorial_renv.html" target="_blank">
+                  <i class="fas fa-book"></i> Tutorial
+                </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/881466966/109795e964" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/ensuring-reproducibility-renv.jpg" alt="">
+          </a>
+        </div>
+  </div>
+
+
+
+  <div class="column text data modeling">
+  <div class="content">
+        <a class="portfolio-link" href="https://vimeo.com/879028429/27abaa9937" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Text analysis with quanteda
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Killian Conyngham, Aranxa Márquez Ampudia, Luca-Verona Vellage</p>
+                  <a href="https://vimeo.com/879028429/27abaa9937" target="_blank">
+                  <i class="fab fa-youtube"></i> Video
+                </a>
+                <a href="https://github.com/intro-to-data-science-23-workshop/06-textanalysis-Conyngham-Vellage-Marquez" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/06-textanalysis-Conyngham-Vellage-Marquez/29fc62545259597f3f0974270d6e734661d5634b/Live_Tutorial.html" target="_blank">
+                  <i class="fas fa-book"></i> Tutorial
+                </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/879028429/27abaa9937" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/text-analysis-quanteda.jpg" alt="">
+          </a>
+        </div>
+  </div>
+
+  <div class="column text data">
+  <div class="content">
+         <a class="portfolio-link" href="https://vimeo.com/879028361/bbc46a7467" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Advanced string processing with stringi and stringr
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Daniel Boppert, Jackson Luckey, Miriam Runde</p>
+                   <a href="https://vimeo.com/879028361/bbc46a7467" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/04-text-analysis-Boppert-Luckey-Runde" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a href="https://raw.githack.com/intro-to-data-science-23-workshop/04-text-analysis-Boppert-Luckey-Runde/main/additional_exercises.html" target="_blank">
+                    <i class="fas fa-book"></i> Tutorial
+                  </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/879028361/bbc46a7467" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/string-processing-stringi-stringr.jpg" alt="">
+          </a>
+        </div>
+  </div>
+
+  <div class="column time data modeling">
+  <div class="content">
+        <a class="portfolio-link" href="https://vimeo.com/879028404/54f1aff518" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Time-series analysis with tsibble and fable
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Benjamin Adoba Ayida, Johannes Müller, Armande Aboudrar-Méda</p>
+                   <a href="https://vimeo.com/879028404/54f1aff518" target="_blank">
+                  <i class="fab fa-youtube"></i> Video
+                </a>
+                <a href="https://github.com/intro-to-data-science-23-workshop/05-Time-series-Aboudrar-Ayida-Mueller" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/05-Time-series-Aboudrar-Ayida-Mueller/c998e6f73cf8ec267547d537001e15a0bbe0124c/material/presentation.html" target="_blank">
+                  <i class="fas fa-book"></i> Tutorial
+                </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/879028404/54f1aff518" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/ts-analysis-tsibble-fable.jpg" alt="">
+          </a>
+        </div>
+  </div>
+
+    <div class="column time data">
+    <div class="content">
+          <a class="portfolio-link" href="https://vimeo.com/879028090/a38e78e181" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Dates and times with lubridate
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Anzhelika Belozerova, Monserrat Lopez Perez</p>
+                   <a href="https://vimeo.com/879028090/a38e78e181" target="_blank">
+                    <i class="fab fa-youtube"></i> Video
+                  </a>
+                  <a href="https://github.com/intro-to-data-science-23-workshop/03-Dates-Lopez-Belozerova" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/03-Dates-Lopez-Belozerova/d103af71e2a4d8e4cba16e449758e4ffa6a451c4/01-tutorial-lubridate.html" target="_blank">
+                    <i class="fas fa-book"></i> Tutorial
+                  </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/879028090/a38e78e181" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/dates-times-lubridate.jpg" alt="">
+          </a>
+        </div>
+  </div>
+
+    <div class="column visualization web publishing geo">
+    <div class="content">
+    <a class="portfolio-link" href="https://vimeo.com/879028515/4b97fb5988" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Interactive maps with leaflet
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Ray Hossain, Manjiri Girish Satam, Camilo Pedraza Jiménez</p>
+                  <a href="https://vimeo.com/879028515/4b97fb5988" target="_blank">
+                  <i class="fab fa-youtube"></i> Video
+                </a>
+                <a href="https://github.com/intro-to-data-science-23-workshop/09-leaflet-satam-jimenez-hossain" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/09-leaflet-satam-jimenez-hossain/main/Leaflet_Tutorial.html" target="_blank">
+                  <i class="fas fa-book"></i> Tutorial
+                </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/879028515/4b97fb5988" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/interactive-maps-leaflet.jpg" alt="">
+          </a>
+        </div>
+  </div>
+
+
+    <div class="column visualization web publishing">
+    <div class="content">
+    <a class="portfolio-link" href="https://vimeo.com/879218806/4a0e91f91f" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Interactive graphics with plotly
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Lonny Chen, Gayatri Shejwal, Giorgio Coppola</p>
+                  <a href="https://vimeo.com/879218806/4a0e91f91f" target="_blank">
+                  <i class="fab fa-youtube"></i> Video
+                </a>
+                <a href="https://github.com/intro-to-data-science-23-workshop/10-plotlydash-coppola-shejwal-chen" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/" target="_blank">
+                  <i class="fas fa-book"></i> Tutorial
+                </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/879218806/4a0e91f91f" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/interactive-graphics-plotly.jpg" alt="">
+          </a>
+    </div>
+    </div>
+
+    <div class="column visualization publishing">
+    <div class="content">
+    <a class="portfolio-link" href="https://vimeo.com/879028494/45a3617ac4" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Presentation-ready tables with gt and gtExtra
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Leticia Figueiredo Collado, Aditya Narayan Rai, Lino Zurmühl</p>
+                  <a href="https://vimeo.com/879028494/45a3617ac4" target="_blank">
+                  <i class="fab fa-youtube"></i> Video
+                </a>
+                <a href="https://github.com/intro-to-data-science-23-workshop/08-gt-rai-collado-zurmuehl" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/08-gt-rai-collado-zurmuehl/33175bdf73ff66075bb178742be6ba0655daa4a0/practice_materials_solutions.html" target="_blank">
+                  <i class="fas fa-book"></i> Tutorial
+                </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/879028494/45a3617ac4" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/tables-gt-gtExtra.jpg" alt="">
+          </a>
+    </div>
+    </div>
+
+  <div class="column modeling">
+  <div class="content">
+    <a class="portfolio-link" href="https://vimeo.com/879028624/fb808f0d91" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                  <h4>Tidy modeling with tidymodels
+                  </h4>
+                  <p style="font-size:smaller;" class="text-muted">Daniyar Imanaliev, Isabella Urbano Trujillo, Henry Baker</p>
+                  <a href="https://vimeo.com/879028624/fb808f0d91" target="_blank">
+                  <i class="fab fa-youtube"></i> Video
+                </a>
+                <a href="https://github.com/intro-to-data-science-23-workshop/12-tidymodels-imanaliev-baker-urbanotrujillo" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rawcdn.githack.com/intro-to-data-science-23-workshop/12-tidymodels-imanaliev-baker-urbanotrujillo/b89aafc7a2070a59be2cb438bc88b6bd8d568b14/presentation.html#5" target="_blank">
+                  <i class="fas fa-book"></i> Tutorial
+                </a>
+              </div>
+            </div>
+            <a class="portfolio-link" href="https://vimeo.com/879028624/fb808f0d91" target="_blank">
+              <img class="img-fluid img-portfolio" src="img/sessions/tidy-modeling-tidymodels.jpg" alt="">
+          </a>
+        </div>
+  </div>
+
+          <div class="col-lg-12 text-center">
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger center" href="https://github.com/intro-to-data-science-23-workshop" target="_blank">See more on GitHub</a>
+        </div>
+
+
+
+<!-- END GRID -->
+</div>
+</section>
+
+
+  <!-- Participants -->
+  <section class="bg-light page-section" id="participants">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading-underline text-uppercase text-black">Participants</h2>
+        </div>
+      </div>
+      <div class="row">
+
+        <style type="text/css">
+        .tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;}
+        .tg td{border-style:solid;border-width:0px;overflow:hidden;
+          padding:10px 4px;word-break:normal;}
+        .tg th{border-style:solid;border-width:0px;
+          overflow:hidden;padding:10px 4px;word-break:normal;}
+        .tg .tg-syad{border-color:inherit;color:#000000;}
+        @media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}</style>
+        <div class="col-lg-12 tg-wrap text-center">
+          <table class="tg">
+        <tbody>
+          <tr>
+				<td class="tg-syad">	Aditya Narayan Rai  </td>
+				<td class="tg-syad">	Anzhelika Belozerova	</td>
+				<td class="tg-syad">	Aranxa Márquez Ampudia	</td>
+				<td class="tg-syad">	Armande Aboudrar-Méda	</td>
+				</tr>
+				<tr>
+				<td class="tg-syad">	Benjamin Adoba Ayida	</td>
+				<td class="tg-syad">	Camilo Pedraza Jiménez 	</td>
+				<td class="tg-syad">	Daniel Boppert	</td>
+				<td class="tg-syad">	Daniyar Imanaliev	</td>
+				</tr>
+				<tr>
+				<td class="tg-syad">	Elena Dreyer	</td>
+				<td class="tg-syad">	Gayatri Shejwal	</td>
+				<td class="tg-syad">	Giorgio Coppola	</td>
+				<td class="tg-syad">	Giulia Maria Petrilli	</td>
+				</tr>
+				<tr>
+				<td class="tg-syad">	Henry Baker	</td>
+				<td class="tg-syad">	Isabella Urbano Trujillo	</td>
+				<td class="tg-syad">	Jackson Luckey	</td>
+				<td class="tg-syad">	Jennifer Estigene	</td>
+				</tr>
+				<tr>
+				<td class="tg-syad">	Johannes Müller	</td>
+				<td class="tg-syad">	Killian Conyngham	</td>
+				<td class="tg-syad">	Leticia Figueiredo Collado	</td>
+				<td class="tg-syad">	Lino Zurmühl	</td>
+				</tr>
+				<tr>
+				<td class="tg-syad">	Lonny Chen	</td>
+				<td class="tg-syad">	Luca-Verona Vellage	</td>
+				<td class="tg-syad">	Luis Fernando Ramirez Ruiz 	</td>
+				<td class="tg-syad">	Manjiri Girish Satam	</td>
+				</tr>
+				<tr>
+				<td class="tg-syad">	Milton Mier	</td>
+				<td class="tg-syad">	Minho Kang	</td>
+				<td class="tg-syad">	Miriam Runde	</td>
+				<td class="tg-syad">	Monserrat Lopez Perez	</td>
+				</tr>
+				<tr>
+				<td class="tg-syad">	Nima Thing	</td>
+				<td class="tg-syad">	Ray Hossain	</td>
+				<td class="tg-syad">	Sai Prusni Bandela	</td>
+				<td class="tg-syad">	Shruti Kakade	</td>
+				</tr>
+				<tr>
+				<td class="tg-syad">	Varvara Ilyina	</td>
+				<td class="tg-syad">	Xiaohan Wu	</td>
+				</tr>
+        </tbody>
+        </table></div>
+
+        </div>
+    </div>
+  </section>
+
+  <!-- Organizers -->
+  <section class="bg-dark page-section" id="organizers">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading-underline text-uppercase text-white">Organizers</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-lg-3">
+          <div class="team-member text-white">
+            <img class="mx-auto rounded-circle" src="img/team/Simon_Munzert.jpg" alt="">
+            <h4>Simon Munzert<br></h4>
+            <p class="text-muted">
+              Instructor<br>
+              <i>Hertie School</i>
+            </p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="mailto:munzert[at]hertie-school.org">
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://simonmunzert.github.io/">
+                  <i class="fa fa-globe"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/simonmunzert">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="team-member text-white">
+            <img class="mx-auto rounded-circle" src="img/team/Hiba_Ahmad.jpg" alt="">
+            <h4>Hiba Ahmad</h4>
+            <p class="text-muted">
+              Teaching Assistant<br>
+              <i>Hertie School</i>
+            </p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="mailto:	h.ahmad[at]hertie-school.org">
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.hertie-school.org/en/research/faculty-and-researchers/profile/person/ahmad">
+                  <i class="fa fa-globe"></i>
+                </a>
+              </li>
+              <!--<li class="list-inline-item">
+                <a href="https://github.com/juka19">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="team-member text-white">
+            <img class="mx-auto rounded-circle" src="img/team/Steven_Kerr.png" alt="">
+            <h4>Steven Kerr</h4>
+            <p class="text-muted">
+              Teaching Assistant<br>
+              <i>Hertie School</i>
+            </p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="mailto:s.kerr[at]hertie-school.org">
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </li>
+              <!--<li class="list-inline-item">
+                <a href="https://www.hertie-school.org/en/research/faculty-and-researchers/profile/person/arend">
+                  <i class="fa fa-globe"></i>
+                </a>
+              </li>-->
+              <li class="list-inline-item">
+                <a href="https://smkerr.github.io">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="team-member text-white">
+            <img class="mx-auto rounded-circle" src="img/team/Alex_Karras.jpg" alt="">
+            <h4>Alex Karras</h4>
+            <p class="text-muted">
+              Faculty Assistant<br>
+              <i>Hertie School</i>
+            </p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="mailto:	karras[at]hertie-school.org">
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.hertie-school.org/en/research/faculty-and-researchers/profile/person/karras">
+                  <i class="fa fa-globe"></i>
+                </a>
+              </li>
+              <!--<li class="list-inline-item">
+                <a href="https://github.com/juka19">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+  		  <div class="attribution">
+  		  Images on this page created with Bing Image Creator (DALL-E 3).
+  	  </div>
+      <div class="row">
+        <div class="col-md-6">
+          <span class="copyright">Copyright &copy; IDS Workshop Hertie School 2023</span>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="privacy.html">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+
+  <!-- Portfolio Filter JavaScript -->
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+
+</html>
